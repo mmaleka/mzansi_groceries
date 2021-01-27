@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+mzansi_groceries_cordova
 
 
 # local env files
@@ -25,3 +26,4 @@ pnpm-debug.log*
 /npm run cordova-prepare/platforms
 /npm run cordova-prepare/plugins
 /public/cordova.js
+
