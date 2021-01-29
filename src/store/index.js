@@ -228,6 +228,19 @@ export default new Vuex.Store({
         .catch(err => console.error(err));
     },
 
+    async getAPISearchText({ commit }, val) {
+      console.log("val: ", val);
+      console.log(commit);
+      await axios
+        .post(this.state.endpoints.baseURL + 'api-analytics/api_search_text/', {
+          search_text: val,
+        })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => console.error(err));
+    },
+
 
     },
   modules: {

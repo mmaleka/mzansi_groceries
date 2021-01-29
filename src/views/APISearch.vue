@@ -69,7 +69,7 @@
                 <v-list-item-content>
                   <v-col cols="8">
                     <router-link to = "/register">
-                      <v-btn block type="submit" @click="Login" value="Submit" color="teal" dark>Add to shopping cart</v-btn>
+                      <v-btn block type="submit" value="Submit" color="teal" dark>Add to shopping cart</v-btn>
                     </router-link>
                   </v-col>
                   <router-view></router-view>
@@ -79,14 +79,6 @@
           </v-expand-transition>
         </v-card>
       </v-row>
-      <!-- <v-row align="center" justify="center">
-            <v-col cols="8">
-              <router-link to = "/register">
-                <v-btn block type="submit" @click="Login" value="Submit" color="teal" dark>Add to shopping cart</v-btn>
-              </router-link>
-            </v-col>
-            <router-view></router-view>
-      </v-row> -->
     </v-container>
   </div>
 </template>
@@ -127,6 +119,9 @@
     watch: {
       search (val) {
         console.log("val: ", val);
+        if (val.length > 3){
+          this.$store.dispatch('getAPISearchText', val)
+        }
         // Items have already been loaded
         if (this.items.length > 0) return
 

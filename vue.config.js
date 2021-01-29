@@ -6,6 +6,6 @@ module.exports = {
   publicPath: '',
 
   pluginOptions: {
-    cordovaPath: 'npm run cordova-prepare'
+    cordovaPath: 'src-cordova'
   }
 }
