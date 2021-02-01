@@ -39,9 +39,9 @@
                 <p class="blue-grey--text">or Register</p>
               </router-link>
             </v-col>
-            <v-col cols="8">
+            <!-- <v-col cols="8">
               <v-btn block color="" dark @click="password_reset()">forgot your password?</v-btn>
-            </v-col>
+            </v-col> -->
             <router-view></router-view>
         </v-row>
     </v-container>
