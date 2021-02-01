@@ -109,6 +109,7 @@ export default {
       }
       console.log("this.groceries_data_pagination.next: ", this.groceries_data_pagination.next);
       this.$store.dispatch('updateGroceries', loadmoreData)
+      this.$store.dispatch('viewTrackerCount', 'load more data')
     },
 
   },

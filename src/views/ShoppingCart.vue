@@ -37,7 +37,12 @@ export default {
   created() {
     this.$store.dispatch('fetchGroceries')
     this.$store.dispatch('updateGroceryCount', 'ShoppingCartView')
-  }
+  },
+
+  mounted() {
+      console.log("shopping cart component mounted");
+      this.$store.dispatch('viewTrackerCount', 'shopping cart')
+  },
 
 
 }

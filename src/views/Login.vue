@@ -30,11 +30,11 @@ export default {
     // ...mapActions(['fetchProfile']),
   },
 
-
   mounted() {
       console.log("login component mounted");
       this.$store.dispatch('viewTrackerCount', 'groceries login')
-    },
+  },
+
 }
 </script>
 
