@@ -241,6 +241,19 @@ export default new Vuex.Store({
         .catch(err => console.error(err));
     },
 
+    async viewTrackerCount({ commit }, val) {
+      console.log(commit);
+      await axios
+        .post(this.state.endpoints.baseURL + 'api-analytics/api_viewtrackercount/', {
+          views_count: 1,
+          view_type: val
+        })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => console.error(err));
+    },
+
 
     },
   modules: {

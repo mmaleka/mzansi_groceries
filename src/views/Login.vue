@@ -32,9 +32,9 @@ export default {
 
 
   mounted() {
-    // let user_id = VueJwtDecode.decode(this.$store.getters.userjwt).user_id
-    // this.fetchProfile(user_id);
-  }
+      console.log("login component mounted");
+      this.$store.dispatch('viewTrackerCount', 'groceries login')
+    },
 }
 </script>
 
