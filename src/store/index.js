@@ -215,12 +215,12 @@ export default new Vuex.Store({
         .catch(err => console.error(err));
     },
 
-    async updateRegisterCount({ commit }) {
+    async updateRegisterCount({ commit }, val) {
       console.log(commit);
       await axios
         .post(this.state.endpoints.baseURL + 'api-analytics/api_register_count/', {
           views_count: 1,
-          ip_address: "grocery store"
+          ip_address: val
         })
         .then(res => {
           console.log(res);

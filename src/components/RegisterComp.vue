@@ -132,7 +132,7 @@
 
     mounted() {
       console.log("register component mounted");
-      this.$store.dispatch('updateRegisterCount')
+      this.$store.dispatch('updateRegisterCount', 'groceries register')
     },
 
   }
